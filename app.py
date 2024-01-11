@@ -1,31 +1,26 @@
-from flask import Flask,render_template
-
-app = Flask(__name__)
-
+from flask import Flask,render_template,request
+app=Flask(__name__)
 @app.route('/')
-def culculator():
-
+def hello():
+    
     return render_template('index.html')
-
-@app.route('/result', methods=['GET','POST'])
+@app.route("/result",methods=['GET','POST'])
 def hi():
+    output=None
     if request.method=='POST':
-        num1 = int(request.form['num1'])
-        num2 = int(request.form['num2'])
-        operation = request.form['operation'] 
+        num1=int(request.form['num1'])
+        num2=int(request.form['num2'])
+        operation=request.form['operation']
         output=cal(num1,num2,operation)
     return render_template('result.html',operation=operation,output=output)
-        if operation == 'Addition':
-           return(num1+num2)
-        elif operation == 'Subtraction':
-            return(num1-num2)
-        elif operation =='Multiplication':
-          return(num1*num2)
-        elif operation == 'Division' :
-           return(num1/num2)
-        elif operation =='square':
-           return(num1**num2)
-        elif operation == 'modulus':
-          return(num1%num2)    
-if __name__=='main_':
+def cal(num1,num2,operation):
+    if operation=='addition':
+        return num1 + num2
+    elif operation=='subtraction':
+        return num1 - num2
+    elif operation=='multiplication':
+        return num1 * num2
+    elif operation=='division':
+        return num1/num2
+if __name__=='__main__':
     app.run()

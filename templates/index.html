@@ -1,20 +1,23 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title> calculator</title>
-    </head>
-    <body>
-        <center><form>
-            <br> <br>
-            <h1><i>CALCULATOR</i></h1><br>
-            <label for="num1">Enter first number</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label for="num2">Enter second number</label><br>
-            <input type="number" id="num1">&nbsp; &nbsp; &nbsp; <input type="number" id="num2"><br><br><br><b>Which opertion do you want</b><br><br><br>
-            &nbsp;<input type="radio" id="addition" ><label for="addition">Addition</label><br>
-       ;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="Subtraction" ><label for="Subtraction">Subtraction</label><br>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="Multiplication" ><label for="Multiplication">Multiplication</label><br>
-            <input type="radio" id="Division" ><label for="Division">Division</label><br>
-            <input type="radio" id="Factoral" ><label for="Factoral">Factoral</label><br>
-            <input type="radio" id="Modules" ><label for="Modules">Modules</label><br>
-        </center></form>
-    </body>
+<head> 
+    <h1>calculator</h1>
+     
+</head>
+
+<body>
+<form action ="/result" method="post">
+   
+    <label for="num1">enter first number:<\label>
+
+<input type="number" Id="num1" name="num1"><br>
+<label for="num2">enter second number<\label>
+<input type="number" Id="num2" name="num2"><br>
+    <b>select your operation</b><br>
+    <input type="radio" value="addition" name="operation">addition<br>
+    <input type="radio" value="subtracton" name="operation">subtraction<br>
+    <input type="radio" value="multiplication" name="operation">multiplication<br>
+    <input type="radio" value="division" name="operation">division<br>
+    <input type="submit" value="submit">
+</form>
+</body>
 </html>
